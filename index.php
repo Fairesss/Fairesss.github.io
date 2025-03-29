@@ -5,6 +5,6 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Hello, Git!!</p>
+    <?php echo "Today is " . date("dd/mm/yy") . "<br>";?>
 </body>
 </html>
