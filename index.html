@@ -5,13 +5,15 @@
     <title>Document</title>
 
     <script>
-        document.onload = () => { setTime(); setInterval(setTime, 10000) }
 
         function setTime() {
             let date = new Date();
             let x = document.getElementById("time");
             x.innerHTML = date;
         }
+
+setInterval(setTime, 1000);
+
     </script>
 </head>
 <body>
