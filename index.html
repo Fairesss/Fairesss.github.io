@@ -5,7 +5,7 @@
     <title>Document</title>
 
     <script>
-        document.onload = () => { setInterval(setTime, 10000) }
+        document.onload = () => { setTime(); setInterval(setTime, 10000) }
 
         function setTime() {
             let date = new Date();
@@ -16,5 +16,9 @@
 </head>
 <body>
     <h1 id="time">Hello, Git!</h1>
+    <div id="time">
+        DATE
+    </div>
+
 </body>
 </html>
