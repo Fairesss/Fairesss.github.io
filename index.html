@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+
+    <script>
+        document.onload = () => { setInterval(setTime, 10000) }
+
+        function setTime() {
+            let date = new Date();
+            let x = document.getElementById("time");
+            x.innerHTML = date;
+        }
+    </script>
 </head>
 <body>
-    <h1>Hello, Git!</h1>
+    <h1 id="time">Hello, Git!</h1>
 </body>
 </html>
