@@ -9,18 +9,32 @@
         function setTime() {
             let date = new Date();
             let x = document.getElementById("time");
-            x.innerHTML = date;
+            x.innerHTML = date.toString();
         }
 
-setInterval(setTime, 1000);
+        function updateVisitedCount() {
+            fetch("./data.json")
+                .then(res => res.json())
+                .then(res =>
+                    document.getElementById("visitedCount").innerHTML = res["visitedCount"])
+        }
+
+        
+
+        setInterval(setTime, 1000);
+        updateVisitedCount();
 
     </script>
 </head>
 <body>
-    <h1>Hello, Git!</h1>
-    <div id="time">
-        DATE
-    </div>
+<h1>Hello, Git!</h1>
+<div id="time">
+    DATE
+</div>
+
+<div id="visitedCount">
+
+</div>
 
 </body>
 </html>
